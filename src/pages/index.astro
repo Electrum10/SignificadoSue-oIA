@@ -5,9 +5,46 @@ import Resultado from '../components/resultado.astro';
 ---
 
 <Layout title="Significados sueño">
-	<BotonHablarIA />
-	<Resultado />
+	<div class="Contenido">
+		<div id="BotonHablarIA">
+			<p>Clica para descubrir el significado del sueño que tuviste hoy</p>
+			<BotonHablarIA />
+		</div>
+		<div id="Resultado">
+			<Resultado />
+		</div>
+	</div>
 </Layout>
 
+<style>
+
+	.Contenido {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 400px;
+	}
+	.Contenido:first-child {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+</style>
+
+<script>
+	const BotonHablarIA = document.getElementById("BotonHablarIA");
+	const Resultado = document.getElementById("Resultado");
+	var MostrarResultado = false
+
+	BotonHablarIA.addEventListener("click", () =>	 {
+		Resultado.style.display = "block"
+	})
+	
+	if(MostrarResultado === false) {
+		Resultado.style.display = "none";
+	}
+
+</script>
 
 
