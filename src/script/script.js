@@ -4,7 +4,7 @@ BotonPrompt.addEventListener("click", () => {
 const Prompt = document.getElementById("Prompt");
 const PromptDelUsuario = Prompt.value
 
-const OPENAI_API_KEY = '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';
+const OPENAI_API_KEY = '';
 
 const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
 
