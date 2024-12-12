@@ -4,8 +4,6 @@ BotonPrompt.addEventListener("click", () => {
 const Prompt = document.getElementById("Prompt");
 const PromptDelUsuario = Prompt.value
 
-const OPENAI_API_KEY = '';
-
 const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
 
 // Función asíncrona para consultar a OpenAI
